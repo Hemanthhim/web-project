@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodieee - Your Favorite Food, Delivered Fast!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #246ccf; /* Tailwind gray-50 */
+        }
+        /* Custom transition classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .card-hover-effect {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-orange-500">
+                <i class="fas fa-utensils mr-2"></i> Foodieee
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-orange-500 transition-colors">Home</a>
+                <a href="#menu" class="text-gray-600 hover:text-orange-500 transition-colors">Menu</a>
+                <a href="#offers" class="text-gray-600 hover:text-orange-500 transition-colors">Offers</a>
+                <a href="#contact" class="text-gray-600 hover:text-orange-500 transition-colors">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="./login.html"> <button class="hidden md:block bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-all duration-300 shadow-lg shadow-orange-500/20" >
+                    Sign In
+                </button></a>
+                <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+             <a href="#home" class="block py-2 px-4 text-sm text-gray-600 hover:bg-orange-50">Home</a>
+             <a href="#menu" class="block py-2 px-4 text-sm text-gray-600 hover:bg-orange-50">Menu</a>
+             <a href="#offers" class="block py-2 px-4 text-sm text-gray-600 hover:bg-orange-50">Offers</a>
+             <a href="#contact" class="block py-2 px-4 text-sm text-gray-600 hover:bg-orange-50">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 md:pt-32 pb-16 bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=');">
+        <div class="container mx-auto px-6 text-center text-white">
+            <div class="fade-in">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Craving something delicious?</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-200">Get your favorite meals delivered hot and fresh to your doorstep, faster than you can say "Foodieee!"</p>
+                <a href="#menu" class="bg-orange-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-xl shadow-orange-500/30">
+                    Explore Menu <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10 fade-in">Browse by Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
+                <!-- Category Item -->
+                <div class="fade-in" style="transition-delay: 100ms;">
+                    <a href="#" class="block bg-gray-50 p-6 rounded-2xl card-hover-effect">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXaurdueUZ_tMTURAx8yzh2adwTCtWxhIlBQ&s" alt="Pizza" class="w-20 h-20 mx-auto mb-4 rounded-full shadow-lg" onerror="this.src='https://placehold.co/100x100/FFC107/FFFFFF?text=Pizza'">
+                        <h3 class="font-semibold text-lg">Pizza</h3>
+                    </a>
+                </div>
+                <!-- Category Item -->
+                 <div class="fade-in" style="transition-delay: 200ms;">
+                    <a href="#" class="block bg-gray-50 p-6 rounded-2xl card-hover-effect">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeoBUl2L5VugaXVCjkVdRtNi8p_PIttRImgw&sr" alt="Burger" class="w-20 h-20 mx-auto mb-4 rounded-full shadow-lg" onerror="this.src='https://placehold.co/100x100/F44336/FFFFFF?text=Burger'">
+                        <h3 class="font-semibold text-lg">Burgers</h3>
+                    </a>
+                </div>
+                <!-- Category Item -->
+                 <div class="fade-in" style="transition-delay: 300ms;">
+                    <a href="#" class="block bg-gray-50 p-6 rounded-2xl card-hover-effect">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbXw6sZdH4TPrnJBVlYN_IKS8YscKHm4Lgmg&s" alt="Sushi" class="w-20 h-20 mx-auto mb-4 rounded-full shadow-lg" onerror="this.src='https://placehold.co/100x100/4CAF50/FFFFFF?text=Sushi'">
+                        <h3 class="font-semibold text-lg">chats</h3>
+                    </a>
+                </div>
+                <!-- Category Item -->
+                 <div class="fade-in" style="transition-delay: 400ms;">
+                    <a href="#" class="block bg-gray-50 p-6 rounded-2xl card-hover-effect">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVrk_rNg2yawHJwZP9QabaIMxfYoePhTRn9w&s" alt="Pasta" class="w-20 h-20 mx-auto mb-4 rounded-full shadow-lg" onerror="this.src='https://placehold.co/100x100/2196F3/FFFFFF?text=Pasta'">
+                        <h3 class="font-semibold text-lg">Pasta</h3>
+                    </a>
+                </div>
+                <!-- Category Item -->
+                 <div class="fade-in" style="transition-delay: 500ms;">
+                    <a href="#" class="block bg-gray-50 p-6 rounded-2xl card-hover-effect">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9SmDfsN-faCPWyUBIvGu7-LLqYhdUHhikJg&s" alt="Desserts" class="w-20 h-20 mx-auto mb-4 rounded-full shadow-lg" onerror="this.src='https://placehold.co/100x100/9C27B0/FFFFFF?text=Dessert'">
+                        <h3 class="font-semibold text-lg">Desserts</h3>
+                    </a>
+                </div>
+                <!-- Category Item -->
+                 <div class="fade-in" style="transition-delay: 600ms;">
+                    <a href="#" class="block bg-gray-50 p-6 rounded-2xl card-hover-effect">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaSd_r5Mg-jKKT1I-IBbOWxnbA9JGRP3URQQ&s" alt="Drinks" class="w-20 h-20 mx-auto mb-4 rounded-full shadow-lg" onerror="this.src='https://placehold.co/100x100/795548/FFFFFF?text=Coffee'">
+                        <h3 class="font-semibold text-lg">Drinks</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Menu Section -->
+    <section id="menu" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10 fade-in">Our Most Popular Dishes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect fade-in">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKCOyo9DUnsQj-DzxG8gTHpZGzLc11-Qv8MQ&s" class="w-full h-56 object-cover" alt="Gourmet Burger" onerror="this.src='https://placehold.co/600x400/FF9800/FFFFFF?text=Burger'">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Gourmet Cheeseburger</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Juicy beef patty with aged cheddar, special sauce, lettuce, and tomato on a brioche bun.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="font-bold text-xl text-orange-500">333 Rs only</span>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-700 font-semibold">4.8</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-500 text-white font-bold py-2 px-4 rounded-full hover:bg-orange-600 transition-all duration-300">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Menu Item 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect fade-in" style="transition-delay: 200ms;">
+                    <img src="https://st2.depositphotos.com/1177973/11104/i/950/depositphotos_111046234-stock-photo-delicious-hot-pizza-on-wooden.jpg" class="w-full h-56 object-cover" alt="Margherita Pizza" onerror="this.src='https://placehold.co/600x400/E91E63/FFFFFF?text=Pizza'">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Margherita Pizza</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Classic pizza with fresh mozzarella, San Marzano tomatoes, fresh basil, salt, and extra-virgin olive oil.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="font-bold text-xl text-orange-500">199 Rs only</span>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-700 font-semibold">4.9</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-500 text-white font-bold py-2 px-4 rounded-full hover:bg-orange-600 transition-all duration-300">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Menu Item 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect fade-in" style="transition-delay: 400ms;">
+                    <img src="https://imgmediagumlet.lbb.in/media/2020/11/5fc099e8cb871669edeefe2a_1606457832429.jpg" class="w-full h-56 object-cover" alt="Sushi Platter" onerror="this.src='https://placehold.co/600x400/00BCD4/FFFFFF?text=Sushi'">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Deluxe Sushi Platter</h3>
+                        <p class="text-gray-600 mb-4 text-sm">A beautiful assortment of fresh nigiri and maki rolls, served with wasabi and soy sauce.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="font-bold text-xl text-orange-500">155.00 Rs only</span>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-700 font-semibold">4.7</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-500 text-white font-bold py-2 px-4 rounded-full hover:bg-orange-600 transition-all duration-300">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers" class="py-16 bg-orange-50">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-2xl shadow-xl flex flex-col md:flex-row items-center overflow-hidden fade-in">
+                <div class="w-full md:w-1/2">
+                    <img src="https://t3.ftcdn.net/jpg/03/51/02/46/360_F_351024684_qRJBZa0XlvKs5bKDHVqlcbVF2ux4tDga.jpg" class="w-full h-full object-cover" alt="Special Offer" onerror="this.src='https://placehold.co/800x600/333333/FFFFFF?text=Offer!'">
+                </div>
+                <div class="w-full md:w-1/2 p-8 md:p-12 text-center md:text-left">
+                    <h2 class="text-3xl font-bold mb-4">Get <span class="text-orange-500">25% OFF</span> Your First Order!</h2>
+                    <p class="text-gray-600 mb-6">Use code <strong class="text-gray-800">YUM25</strong> at checkout to enjoy a delicious discount on us. What are you waiting for?</p>
+                    <a href="#menu" class="bg-orange-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        Order Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- About -->
+                <div class="fade-in">
+                    <h3 class="text-xl font-bold mb-4">YumDash</h3>
+                    <p class="text-gray-400">Your daily dose of delicious, delivered right to your door. High-quality meals from the best local restaurants.</p>
+                </div>
+                <!-- Links -->
+                <div class="fade-in" style="transition-delay: 200ms;">
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-orange-400 transition-colors">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-orange-400 transition-colors">FAQs</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-orange-400 transition-colors">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-orange-400 transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media -->
+                <div class="fade-in" style="transition-delay: 400ms;">
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-2xl"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 YumDash. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll to top button -->
+    <button id="scrollToTopBtn" class="hidden fixed bottom-5 right-5 bg-orange-500 text-white w-12 h-12 rounded-full shadow-lg hover:bg-orange-600 transition-all duration-300 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+<script src="food.js"></script>
+</body>
+</html>
